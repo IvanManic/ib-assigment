@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import * as api from '../api/index'
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { Table, Button, Form, Toast, Container, Row, Col } from 'react-bootstrap'
+import { Table, Button, Form, Container, Row, Col } from 'react-bootstrap'
 
 function ShortME() {
     const [allSUrls, setShortUrls] = useState([])

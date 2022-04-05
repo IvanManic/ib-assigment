@@ -6,7 +6,7 @@ services:
       dockerfile: dockerfile
    ports:
     -  3000:3000
-   container_name: playground-frontend
+   container_name: mern-frontend
    networks:
     -  mern-stack-net
    volumes:
@@ -23,11 +23,11 @@ services:
       dockerfile: dockerfile
    ports:
      - 5000:5000
-   container_name: playground-backend
+   container_name: mern-backend
    networks:
      - mern-stack-net
    volumes:
-    - ./backend/src:/usr/app/src
+    - ./backend:/usr/app
    depends_on:
     - db
 
@@ -40,11 +40,11 @@ services:
     ports:
       - 27017:27017
     container_name: mongo-db
+    volumes:
+      - ./db/data:/data/db
+      - ./db/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
     networks:
       - mern-stack-net
-    volumes:
-      #- ./db/data:/data/db
-      - ./db/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
 
 networks:
   mern-stack-net:

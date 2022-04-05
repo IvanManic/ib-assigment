@@ -15,5 +15,5 @@ COPY . .
 
 EXPOSE 5000
 
-# Run the API on Nodemon
-CMD ["npm", "run"]
+# Run the Backend on Nodemon
+CMD ["node", "bin/www"]

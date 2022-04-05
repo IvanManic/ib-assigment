@@ -5,7 +5,7 @@ var miniUrl = require('../public/controllers/shortUrlGen')
 var mongoose = require('mongoose')
 
 
-mongoose.connect('mongodb://localhost:27017/shortner', {
+mongoose.connect('mongodb://admin:password@mongo-db:27017/shortner', {
     useNewUrlParser: true, useUnifiedTopology: true
 })
 router.post('/', (req, res) => {
