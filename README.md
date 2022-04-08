@@ -19,6 +19,6 @@ ToDo:
 
     fix dependecies
     better exception handling
- ~~ add env variables for backend and mongodb connectio string ~~
+   ~~add env variables for backend and mongodb connectio string ~~
     add secret for user / passwords
     disable adding existing url
